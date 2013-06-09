@@ -1,5 +1,7 @@
 package org.kaspernj.mirah.erb2mirah
 
+import org.kaspernj.mirah.stdlib.core.Hash
+
 interface connectOutputInterface do
   def run(str:String):void; end
 end
@@ -56,5 +58,37 @@ class Page
   #This is a method that should be overwritten and contain the actual code for generating a page.
   def run_code
     raise "This method should be overwritten."
+  end
+  
+  def _get=(newget:Hash)
+    @get = newget
+  end
+  
+  def _post=(newpost:Hash)
+    @post = newpost
+  end
+  
+  def _meta=(newmeta:Hash)
+    @meta = newmeta
+  end
+  
+  def _cookie=(newcookie:Hash)
+    @cookie = newcookie
+  end
+  
+  def _get
+    return @get
+  end
+  
+  def _post
+    return @post
+  end
+  
+  def _meta
+    return @meta
+  end
+  
+  def _cookie
+    return @cookie
   end
 end
