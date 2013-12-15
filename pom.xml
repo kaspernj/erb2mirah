@@ -22,13 +22,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>org.kaspernj.mirah.stdlib</groupId>
-    	<artifactId>core</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.kaspernj.mirah.stdlib</groupId>
-    	<artifactId>file</artifactId>
+    	<groupId>mirah</groupId>
+    	<artifactId>stdlib</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>

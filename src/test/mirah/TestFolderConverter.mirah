@@ -1,7 +1,7 @@
 package org.kaspernj.mirah.erb2mirah
 
 import org.junit.Test
-import org.kaspernj.mirah.stdlib.file.*
+import mirah.stdlib.*
 
 class TestFolderConverter
   $Test
@@ -10,7 +10,7 @@ class TestFolderConverter
     path_pre = "/home/kaspernj/Dev/Java/Eclipse/erb2mirah/src/test/"
     path_to = "/home/kaspernj/testFolderConverter"
     
-    Dir.mkdir(path_to) if !File.exists(path_to)
+    Dir.mkdir(path_to) if !File.exists?(path_to)
     
     FolderConverter.new(
       "path" => path,

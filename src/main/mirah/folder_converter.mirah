@@ -1,8 +1,8 @@
 package org.kaspernj.mirah.erb2mirah
 
 import java.util.HashMap
-import org.kaspernj.mirah.stdlib.file.File
-import org.kaspernj.mirah.stdlib.file.Dir
+import mirah.stdlib.File
+import mirah.stdlib.Dir
 
 #This class can be used to convert a hole directory to ".mirah"-files which can be mapped to a webserver (like Busa!).
 class FolderConverter
@@ -16,7 +16,7 @@ class FolderConverter
     
     #Parse arguments.
     path = String(args["path"])
-    raise "Invalid path: '#{path}'." if path == nil or !File.exists(path)
+    raise "Invalid path: '#{path}'." if path == nil or !File.exists?(path)
     
     path_to = String(args["path_to"])
     raise "Invalid 'path_to': '#{path_to}'." if path_to == nil
@@ -37,11 +37,11 @@ class FolderConverter
         inst.debug "Skipping because dots: '#{file}'."
       else
         fn = "#{path}/#{file}"
-        raise "Doesnt exist: '#{fn}'." if !File.exists(fn)
+        raise "Doesnt exist: '#{fn}'." if !File.exists?(fn)
         
-        if File.directory(fn)
+        if File.directory?(fn)
           path_to_folder = "#{path_to}/#{file}"
-          Dir.mkdir(path_to_folder) if !File.exists(path_to_folder)
+          Dir.mkdir(path_to_folder) if !File.exists?(path_to_folder)
           
           inst.debug "Found another dir: '#{fn}'."
           

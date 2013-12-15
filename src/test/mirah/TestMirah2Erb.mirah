@@ -1,7 +1,6 @@
 package org.kaspernj.mirah.erb2mirah
 
-import org.kaspernj.mirah.stdlib.core.*
-import org.kaspernj.mirah.stdlib.file.File
+import mirah.stdlib.*
 import org.junit.Test
 
 class TestMirah2Erb

@@ -1,6 +1,6 @@
 package org.kaspernj.mirah.erb2mirah
 
-import org.kaspernj.mirah.stdlib.core.Hash
+import mirah.stdlib.Hash
 
 interface connectOutputInterface do
   def run(str:String):void; end

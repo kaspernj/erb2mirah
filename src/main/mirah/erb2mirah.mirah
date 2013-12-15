@@ -1,6 +1,6 @@
 package org.kaspernj.mirah.erb2mirah
 
-import org.kaspernj.mirah.stdlib.file.File
+import mirah.stdlib.File
 import java.util.*
 
 #This class converts ".mirah.erb"-files to ".mirah"-files containing a class and a method to execute the original code.
